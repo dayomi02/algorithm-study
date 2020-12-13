@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #define num 42
 int main() {
 	/*
@@ -83,29 +84,47 @@ int main() {
 	}
 	printf("%lf", sum / N);
 /	/	/	/	/	/	/	/	/	/	/
-*/
-	int i, n, con = 1;
-	char check;
-	char arr[80] = { 0 };
-	scanf("%d", &n);
-	int* count = (int*)malloc(sizeof(int) * 5);
+	int n, i, j, sum, add;
+	char arr[81];
 
+	scanf("%d", &n);
 	for (i = 0; i < n; i++) {
-		while (1) {
-			scanf("%c", &check);
-			if (check == "O") {
-				count[i] = count[i] + con;
-				con++;
-			}
-			else if (check == "X") {
-				con = 1;
+		sum = 0, add = 1;
+		scanf("%s", arr);
+		for (j = 0; j < strlen(arr); j++) {
+			if (arr[j] == 'O') {
+				sum += add;
+				add++;
 			}
 			else
-				break;
+				add = 1;
 		}
+		printf("%d\n", sum);
 	}
-	for (i = 0; i < n; i++)
-		printf("%d\n", count[i]);
+/	/	/	/	/	/	/	/	/	/	/
+
+*/
+	int i, j, c, n, rate_num=0, sum =0;
+	double  rate, avg = 0.0;
+	int arr[1000] = { 0 };
+
+	scanf("%d", &c);
+	for (i = 0; i < c; i++) {
+
+		scanf("%d", &n);
+		for (j = 0; j < n; j++) {
+			scanf("%d", &arr[j]);
+			sum += arr[j];
+		}
+		avg = (double)sum / n;
+
+		for (j = 0; j < n; j++) {
+			if (avg < arr[j])
+				rate_num++;
+		}
+		printf("%0.3f%%\n", (double)rate_num / n * 100);
+		avg = 0, sum = 0, rate_num=0;
+	}
 
 
 	return 0;
