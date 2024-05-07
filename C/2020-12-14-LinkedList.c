@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-//¿¬°á¸®½ºÆ®·Î ¸¸µé ±¸Á¶Ã¼ º¯¼ö ¼±¾ğ
+//ì—°ê²°ë¦¬ìŠ¤íŠ¸ë¡œ ë§Œë“¤ êµ¬ì¡°ì²´ ë³€ìˆ˜ ì„ ì–¸
 typedef struct NODE {
 	int data;
 	struct NODE* next;
@@ -21,14 +21,14 @@ int main(void) {
 	node2->data = 20;
 	node1->next = node2;
 
-	//³ëµå ¼øÈ¯ º¯¼ö ¼±¾ğ
+	//ë…¸ë“œ ìˆœí™˜ ë³€ìˆ˜ ì„ ì–¸
 	node* curr = head->next;
 	while (curr != NULL) {
 		printf("%d\n", curr->data);
 		curr = curr->next;
 	}
 
-	//freeÇÔ¼ö·Î ÇÒ´çÇÑ ¸Ş¸ğ¸® °ø°£ ÇØÁ¦ (Èü¿µ¿ª)
+	//freeí•¨ìˆ˜ë¡œ í• ë‹¹í•œ ë©”ëª¨ë¦¬ ê³µê°„ í•´ì œ (í™ì˜ì—­)
 	free(head); free(node1); free(node2);
 
 	return 0;
