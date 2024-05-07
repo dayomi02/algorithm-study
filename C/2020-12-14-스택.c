@@ -44,7 +44,7 @@ int main() {
 	printf("POP: %d\n", POP());
 	PUSH(40); PUSH(50); PUSH(60); PUSH(70); PUSH(80);
 
-	printf("½ºÅÃ µ¥ÀÌÅÍ Á¶È¸ : ");
+	printf("Â½ÂºÃ…Ãƒ ÂµÂ¥Ã€ÃŒÃ…Ã ÃÂ¶ÃˆÂ¸ : ");
 	while (top != NULL) {
 		printf("%d ", top->data);
 		freeNode = top;
