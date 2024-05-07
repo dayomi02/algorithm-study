@@ -16,7 +16,7 @@ int main() {
 
 	int a, b = 1;
 	while (scanf("%d %d", &a, &b) != EOF) {
-		//¼Ò½º·ÎºÎÅÍ ´õÀÌ»ó ÀĞÀ» ¼ö ÀÖ´Â µ¥ÀÌÅÍ°¡ ¾øÀ» °æ¿ì EOF
+		//ì†ŒìŠ¤ë¡œë¶€í„° ë”ì´ìƒ ì½ì„ ìˆ˜ ìˆëŠ” ë°ì´í„°ê°€ ì—†ì„ ê²½ìš° EOF
 		printf("%d\n", a + b);
 	}
 		*/
@@ -32,7 +32,7 @@ int main() {
 		b = Number % 10;
 		c = (a + b) % 10;
 		d = b * 10 + c; 
-		Number = d;	//»õ·Î¿î ¼ö
+		Number = d;	//ìƒˆë¡œìš´ ìˆ˜
 		count++;
 		if (d == result) {
 			printf("%d", count);
