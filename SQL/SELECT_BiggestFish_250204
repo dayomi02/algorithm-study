@@ -1,0 +1,9 @@
+// 풀이 날짜: 2025-02-04
+// 풀이 문제: https://school.programmers.co.kr/learn/courses/30/lessons/298517?language=mysql
+
+select id, length
+from fish_info
+where length > 10
+order by length desc, id asc
+limit 10;
+
